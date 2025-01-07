@@ -1,0 +1,125 @@
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Main Content */
+main {
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+ul li, ol li {
+    margin: 10px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Task-specific styling */
+#search-task, #metadata-extraction, #report-findings {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-task h2, #metadata-extraction h2, #report-findings h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Results section */
+#results {
+    margin-top: 20px;
+    opacity: 1; /* Initially visible */
+    transition: opacity 0.5s ease-out;
+}
+
+#results h4 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+#results ul {
+    margin-left: 20px;
+}
+
+#results ul li {
+    margin-bottom: 5px;
+}
+
+#results p {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
