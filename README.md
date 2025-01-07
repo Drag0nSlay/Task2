@@ -13,9 +13,6 @@ This task will guide you through the process of identifying and analyzing social
 - [Tools and Resources](#tools-and-resources)
 - [Task Steps](#task-steps)
 - [Reporting](#reporting)
-- [Example Report](#example-report)
-- [Learning Outcomes](#learning-outcomes)
-- [License](#LICENSE)
 
 ## Task Objectives
 
