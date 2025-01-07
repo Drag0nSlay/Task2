@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 1: Search for Social Media Accounts</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -18,9 +20,9 @@
             <section id="search-task">
                 <h2>Search for a Username Across Platforms</h2>
                 <p>Enter a username to search for its presence across various social media platforms.</p>
-                <input type="text" id="username" placeholder="Enter Username">
-                <button id="search-btn">Search</button>
-                <div id="results"></div>
+                <input type="text" id="username" placeholder="Enter Username (e.g., John Doe)">
+                <button id="searchButton" onclick="searchUser()">Search</button>
+                <div id="result"></div>
             </section>
         </div>
     </main>
@@ -33,4 +35,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
