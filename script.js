@@ -1,69 +1,55 @@
-document.getElementById("search-btn").addEventListener("click", function() {
-    searchUsername();
-});
+// Function to handle the search action
+function searchUser() {
+    let username = document.getElementById("username").value.trim(); // Get the input username and remove extra spaces
+    let resultDiv = document.getElementById("result");
 
-// Listen for the Enter key to trigger search
+    // Predefined valid usernames (e.g., John Doe)
+    let validUsernames = ["John Doe"]; // You can add more usernames if needed
+
+    // Check if the entered username is in the valid list
+    if (validUsernames.includes(username)) {
+        // If the username is valid, show the corresponding data
+        resultDiv.innerHTML = `
+            <strong>Profile Name:</strong> ${username}<br>
+            <strong>Social Media Accounts Found:</strong> Facebook, Twitter, LinkedIn<br>
+            <strong>Key Findings:</strong><br>
+            <ul>
+                <li><strong>Public Posts:</strong> Mentions of travel to New York and London.</li>
+                <li><strong>Friends/Followers:</strong> Connections to XYZ company.</li>
+                <li><strong>Location:</strong> Frequent mentions of California, New York.</li>
+                <li><strong>Geolocation Data:</strong> GPS data from photos showing New York City.</li>
+            </ul>
+        `;
+        resultDiv.style.opacity = "1"; // Ensure visibility
+    } else {
+        // If the username is not found, show a "Not Found" message
+        resultDiv.innerHTML = `
+            <p style="color: red;">Username not found. Please enter a valid username like "John Doe".</p>
+        `;
+        resultDiv.style.opacity = "1"; // Ensure visibility
+    }
+}
+
+// Function to listen for Enter key press to trigger the search
 document.getElementById("username").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
-        searchUsername();
+        searchUser(); // Trigger search on Enter key
     }
 });
-
-function searchUsername() {
-    var username = document.getElementById("username").value;
-    if (username.trim() === "") {
-        alert("Please enter a username.");
-        return;
-    }
-
-    // Simulating a search for the username on social media platforms
-    var resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "<h3>Results for: " + username + "</h3>";
-    
-    // Mock data (Replace this with real search results or API calls)
-    var platforms = ["Facebook", "Twitter", "LinkedIn"];
-    var mockResults = platforms.map(platform => {
-        return `<p><strong>${platform}:</strong> Profile found</p>`;
-    }).join("");
-    
-    resultsDiv.innerHTML += mockResults;
-
-    // Adding the Report Template
-    var reportTemplate = `
-        <h4>Report Template</h4>
-        <p><strong>Profile Name:</strong> ${username}</p>
-        <p><strong>Social Media Accounts Found:</strong> Facebook, Twitter, LinkedIn</p>
-        <p><strong>Key Findings:</strong></p>
-        <ul>
-            <li><strong>Public Posts:</strong> Mentions of travel to New York and London.</li>
-            <li><strong>Friends/Followers:</strong> Connections to XYZ company.</li>
-            <li><strong>Location:</strong> Frequent mentions of California, New York.</li>
-            <li><strong>Geolocation Data:</strong> GPS data from photos showing New York City.</li>
-        </ul>
-    `;
-
-    // Append the report template to the results section
-    resultsDiv.innerHTML += reportTemplate;
-}
 
 // Adding functionality to hide the results when the username input is cleared
 document.getElementById("username").addEventListener("input", function() {
-    var username = document.getElementById("username").value;
-    var resultsDiv = document.getElementById("results");
+    let username = document.getElementById("username").value.trim();
+    let resultDiv = document.getElementById("result");
 
-    if (username.trim() === "") {
+    if (username === "") {
         // Gradually fade out the results when the username is cleared
-        resultsDiv.style.transition = "opacity 0.5s ease-out";
-        resultsDiv.style.opacity = "0";
+        resultDiv.style.transition = "opacity 0.5s ease-out";
+        resultDiv.style.opacity = "0";
 
         // After the fade-out transition completes, clear the content
         setTimeout(function() {
-            resultsDiv.innerHTML = "";
+            resultDiv.innerHTML = "";
         }, 500); // Match the time duration of the transition
-    }
-    else {
-        // Show the results again when typing starts
-        resultsDiv.style.transition = "opacity 0.5s ease-in";
-        resultsDiv.style.opacity = "1";
     }
 });
