@@ -102,7 +102,7 @@ After completing the passive reconnaissance, you should create a report with the
   - **Geolocation Data**: GPS data from photos or posts showing specific locations.
   - **Other Insights**: Any additional valuable data gathered during the investigation.
 
-### Example Report Format
+<!--### Example Report Format
 
 ```markdown
 **Profile Name**: John Doe
@@ -116,4 +116,4 @@ After completing the passive reconnaissance, you should create a report with the
 - **Public Posts**: Mentions of a trip to New York and London, along with vacation photos.
 - **Friends/Followers**: Linked to XYZ company, several high-profile business professionals.
 - **Location**: Frequent mentions of California, New York.
-- **Geolocation Data**: GPS data from an Instagram photo showing New York City.
+- **Geolocation Data**: GPS data from an Instagram photo showing New York City.-->
